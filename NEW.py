@@ -8,9 +8,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 
 # ==== Paths ====
-train_dir = r"D:/College/YEAR 3/Main Subjects/Biometrics/classified dataset/NISTDB4_RAW/train_set"
-test_dir = r"D:/College/YEAR 3/Main Subjects/Biometrics/classified dataset/NISTDB4_RAW/test_set"
-save_dir = r"D:/Coding/Python/Code/models"
+train_dir = r"{Train set path}"
+test_dir = r"{Test set path}"
+save_dir = r"{MOdel access path}"
 os.makedirs(save_dir, exist_ok=True)
 
 # ==== Image Loader ====
@@ -91,3 +91,4 @@ print(confusion_matrix(y_test, y_pred))
 model_path = os.path.join(save_dir, "fingerprint_cnn_model.h5")
 model.save(model_path)
 print(f"\n✅ Model saved at: {model_path}")
+
